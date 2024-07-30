@@ -1,0 +1,66 @@
+[
+  {
+    "pageName": "TemplatePage",
+    "operation": "create",
+    "parentClassName": "NA",
+    "childClassNames": "NA",
+    "locators": [
+      {
+        "elementName": "Variables",
+        "elementType": "Button",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//img[normalize-space(@src)='./../../../assets/icons/variables.svg']",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": "verifyDropDownValues"
+      },
+      {
+        "elementName": "SelectOne",
+        "elementType": "select",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//span[normalize-space(text())='Select one']",
+        "elementActionMethods": "selectByVisibleText",
+        "elementVerificationMethods": "verifyDropDownValues"
+      },
+      {
+        "elementName": "Deal",
+        "elementType": "Image",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//span[normalize-space(text())='Deal']",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": ""
+      },
+      {
+        "elementName": "AddDataSource",
+        "elementType": "Button",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//button[normalize-space(@class)='btn btn-primary mb-3']",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": "verifyelementdisplayed"
+      },
+      {
+        "elementName": "PublishTemplate",
+        "elementType": "Button",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//button[normalize-space(@class)='btn btn-primary publish-btn']",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": "verifyelementdisplayed ,verifyIsElementPresent"
+      },
+      {
+        "elementName": "UntitledDocument",
+        "elementType": "TextArea",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//div[normalize-space(@title)='Untitled Document']",
+        "elementActionMethods": "setText",
+        "elementVerificationMethods": ""
+      },
+      {
+        "elementName": "UpdateTemplate",
+        "elementType": "Button",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//button[normalize-space(@class)='btn btn-primary publish-btn']",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": ""
+      }
+    ]
+  }
+]

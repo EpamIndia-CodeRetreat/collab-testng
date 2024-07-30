@@ -1,0 +1,26 @@
+[
+  {
+    "pageName": "HubspotMainPage",
+    "operation": "create",
+    "parentClassName": "NA",
+    "childClassNames": "NA",
+    "locators": [
+      {
+        "elementName": "Crm",
+        "elementType": "Button",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//span[normalize-space(text())='CRM']",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": "verifyElementText,verifyIsElementPresent"
+      },
+      {
+        "elementName": "Deals",
+        "elementType": "Link",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//span[normalize-space(text())='Deals']",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": "verifyElementText,verifyIsElementPresent"
+      }
+    ]
+  }
+]

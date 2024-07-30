@@ -1,0 +1,26 @@
+[
+  {
+    "pageName": "HubspotLoginPageEmail",
+    "operation": "create",
+    "parentClassName": "NA",
+    "childClassNames": "NA",
+    "locators": [
+      {
+        "elementName": "EmailField",
+        "elementType": "TextBox",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//input[@id='username']",
+        "elementActionMethods": "setText",
+        "elementVerificationMethods": "verifyElementValue,verifyiselementpresent"
+      },
+      {
+        "elementName": "NextButton",
+        "elementType": "Button",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//i18n-string[normalize-space(text())='Next']",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": "verifyelementtext"
+      }
+    ]
+  }
+]

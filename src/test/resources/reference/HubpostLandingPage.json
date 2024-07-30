@@ -1,0 +1,26 @@
+[
+  {
+    "pageName": "HubspotLandingPage",
+    "operation": "create",
+    "parentClassName": "NA",
+    "childClassNames": "NA",
+    "locators": [
+      {
+        "elementName": "AcceptCookies",
+        "elementType": "Button",
+        "locatorIdentifierType": "id",
+        "locatorIdentifierValue": "hs-eu-confirmation-button",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": ""
+      },
+      {
+        "elementName": "Login",
+        "elementType": "Link",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//ul[@class='hsg-nav__group']//a[contains(text(),'Log in')]",
+        "elementActionMethods": "click",
+        "elementVerificationMethods": ""
+      }
+    ]
+  }
+]

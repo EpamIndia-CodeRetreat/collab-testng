@@ -1,0 +1,26 @@
+[
+  {
+    "pageName": "gmailPage",
+    "operation": "create",
+    "parentClassName": "NA",
+    "childClassNames": "",
+    "locators": [
+      {
+        "elementName": "latestEmail",
+        "elementType": "Link",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//table[@class='F cf zt']/tbody/tr[1]/td[5]//span/span)[1]",
+        "elementActionMethods": "click", "getLinkText"
+        "elementVerificationMethods": ""
+      },
+      {
+        "elementName": "emailSubject",
+        "elementType": "TextArea",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "p[contains(text(), 'We noticed')]/preceding-sibling::table[1]/tbody//table/following-sibling::h1",
+        "elementActionMethods": "getValue",
+        "elementVerificationMethods": ""
+      }
+    ]
+  }
+]
