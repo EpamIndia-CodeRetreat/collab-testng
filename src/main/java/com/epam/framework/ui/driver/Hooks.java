@@ -6,7 +6,11 @@ import io.cucumber.java.Before;
 public class Hooks {
     @Before
     public void setUp() {
-        DriverManager.initializeDriver("chrome", "latest", "Windows 10", "local", null);
+        try {
+            DriverManager.getDriver().getCurrentUrl();
+        } catch (NullPointerException e) {
+            DriverManager.initializeDriver("chrome", "latest", "Windows 11", "local", null);
+        }
     }
 
     @After

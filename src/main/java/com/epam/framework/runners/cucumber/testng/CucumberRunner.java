@@ -5,16 +5,20 @@ import com.epam.framework.core.TestContext;
 import com.epam.framework.core.logging.logger.LogLevel;
 import com.epam.framework.core.reporting.Reporter;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 import io.cucumber.testng.TestNGCucumberRunner;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 
+import java.util.Arrays;
+
 @Listeners(CucumberTestNGListener.class)
 @CucumberOptions(
-        features = {"src/test/resources/features"},
+        features = {"src/test/resources/features/swagLabsTest.feature"},
         glue = {"com.epam.stepdefinitions","com.epam.framework.runners.cucumber"}
 )
 public class CucumberRunner extends AbstractTestNGCucumberTests {
@@ -23,12 +27,12 @@ public class CucumberRunner extends AbstractTestNGCucumberTests {
 
     @Before (order = 1)
     public void setUp() {
-        testContext = new TestContext();
+//        testContext = new TestContext();
         testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
-        testContext.getLogger().log(LogLevel.INFO,"<=============================On Before Class======================================>");
-        Context scenarioContext = new Context();
-        testContext.registerContext(scenarioContext);
-        Reporter.register(testContext.getReporter());
+//        testContext.getLogger().log(LogLevel.INFO,"<=============================On Before Class======================================>");
+//        Context scenarioContext = new Context();
+//        testContext.registerContext(scenarioContext);
+//        Reporter.register(testContext.getReporter());
         Reporter.setUp();
     }
 

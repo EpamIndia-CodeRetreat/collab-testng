@@ -100,7 +100,7 @@ public class PageObjectWriterJava implements PageObjectWriter {
                             myWriter.write(pageVerificationTemplate.getVerifyElementPresence(locator.getElementName()));
                             methodFound = true;
                             break;
-                        case "verifyelementdisplayed":
+                        case "verifyiselementdisplayed":
                             myWriter.write(pageVerificationTemplate.getVerifyElementDisplay(locator.getElementName()));
                             methodFound = true;
                             break;
