@@ -1,0 +1,34 @@
+[
+  {
+    "pageName": "SwagLabsLoginPage",
+    "operation": "create",
+    "parentClassName": "NA",
+    "childClassNames": "NA",
+    "locators": [
+      {
+        "elementName": "userNameTxt",
+        "elementType": "TextBox",
+        "locatorIdentifierType": "id",
+        "locatorIdentifierValue": "user-name",
+        "elementActionMethods": "getValue,clearText,setText",
+        "elementVerificationMethods": "verifyIsElementPresent"
+      },
+      {
+        "elementName": "passwordTxt",
+        "elementType": "TextBox",
+        "locatorIdentifierType": "id",
+        "locatorIdentifierValue": "password",
+        "elementActionMethods": "getValue,clearText,setText",
+        "elementVerificationMethods": "verifyElementText,verifyIsElementDisplayed,verifyIsElementPresent,verifyElementValue"
+      },
+      {
+        "elementName": "loginButton",
+        "elementType": "Button",
+        "locatorIdentifierType": "id",
+        "locatorIdentifierValue": "login-button",
+        "elementActionMethods": "click,getText",
+        "elementVerificationMethods": "verifyElementText,verifyElementValue,verifyIsElementDisplayed,verifyIsElementPresent"
+      }
+    ]
+  }
+]

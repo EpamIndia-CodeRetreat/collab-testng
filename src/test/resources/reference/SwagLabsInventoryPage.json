@@ -1,0 +1,106 @@
+[
+  {
+    "pageName": "SwagLabsInventoryPage",
+    "operation": "create",
+    "parentClassName": "NA",
+    "childClassNames": "NA",
+    "locators": [
+      {
+        "elementName": "backPackPrice",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//div[contains(normalize-space(.),'$29.99')][normalize-space(@class)='inventory_item_price']",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyElementText,verifyElementValue,verifyIsElementDisplayed,verifyIsElementPresent"
+      },
+      {
+        "elementName": "AddToCartSauceLabsBackpack",
+        "elementType": "Button",
+        "locatorIdentifierType": "id",
+        "locatorIdentifierValue": "add-to-cart-sauce-labs-backpack",
+        "elementActionMethods": "click,getText",
+        "elementVerificationMethods": "verifyElementText,verifyElementValue,verifyIsElementDisplayed,verifyIsElementPresent"
+      },
+      {
+        "elementName": "bikeLightPrice",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//div[contains(normalize-space(.),'$9.99')][normalize-space(@class)='inventory_item_price']",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyElementText,verifyIsElementDisplayed,verifyIsElementPresent"
+      },
+      {
+        "elementName": "addToCartSauceLabsBikeLight",
+        "elementType": "Button",
+        "locatorIdentifierType": "id",
+        "locatorIdentifierValue": "add-to-cart-sauce-labs-bike-light",
+        "elementActionMethods": "click,getText",
+        "elementVerificationMethods": "verifyElementText,verifyIsElementDisplayed,verifyIsElementPresent"
+      },
+      {
+        "elementName": "boltTshirtPrice",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[contains(normalize-space(.),'$15.99')][normalize-space(@class)='inventory_item_price'])[1]",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyElementText,verifyElementValue,verifyIsElementDisplayed,verifyIsElementPresent"
+      },
+      {
+        "elementName": "AddToCartSauceLabsBoltTshirt",
+        "elementType": "Button",
+        "locatorIdentifierType": "id",
+        "locatorIdentifierValue": "add-to-cart-sauce-labs-bolt-t-shirt",
+        "elementActionMethods": "click,getText",
+        "elementVerificationMethods": "verifyElementText,verifyElementValue,verifyIsElementDisplayed,verifyIsElementPresent"
+      },
+      {
+        "elementName": "fleeceJacketPrice",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//div[contains(normalize-space(.),'$49.99')][normalize-space(@class)='inventory_item_price']",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyElementText,verifyElementValue,verifyIsElementDisplayed,verifyIsElementPresent"
+      },
+      {
+        "elementName": "AddToCartSauceLabsFleeceJacket",
+        "elementType": "Button",
+        "locatorIdentifierType": "id",
+        "locatorIdentifierValue": "add-to-cart-sauce-labs-fleece-jacket",
+        "elementActionMethods": "click,getText",
+        "elementVerificationMethods": "verifyElementText,verifyElementValue,verifyIsElementDisplayed,verifyIsElementPresent"
+      },
+      {
+        "elementName": "OnesiePrice",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "//div[contains(normalize-space(.),'$7.99')][normalize-space(@class)='inventory_item_price']",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyElementText,verifyElementValue,verifyIsElementDisplayed,verifyIsElementPresent"
+      },
+      {
+        "elementName": "AddToCartSauceLabsOnesie",
+        "elementType": "Button",
+        "locatorIdentifierType": "id",
+        "locatorIdentifierValue": "add-to-cart-sauce-labs-onesie",
+        "elementActionMethods": "click,getText",
+        "elementVerificationMethods": "verifyElementText,verifyElementValue,verifyIsElementDisplayed,verifyIsElementPresent"
+      },
+      {
+        "elementName": "redTshirtPrice",
+        "elementType": "Label",
+        "locatorIdentifierType": "xpath",
+        "locatorIdentifierValue": "(//div[contains(normalize-space(.),'$15.99')][normalize-space(@class)='inventory_item_price'])[2]",
+        "elementActionMethods": "getText",
+        "elementVerificationMethods": "verifyElementText,verifyElementValue,verifyIsElementDisplayed,verifyIsElementPresent"
+      },
+      {
+        "elementName": "AddToCartSauceLabsRedTshirt",
+        "elementType": "Button",
+        "locatorIdentifierType": "id",
+        "locatorIdentifierValue": "add-to-cart-test.allthethings()-t-shirt-(red)",
+        "elementActionMethods": "click,getText",
+        "elementVerificationMethods": "verifyElementText,verifyElementValue,verifyIsElementDisplayed,verifyIsElementPresent"
+      }
+    ]
+  }
+]

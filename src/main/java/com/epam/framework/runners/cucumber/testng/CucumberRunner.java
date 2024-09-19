@@ -25,14 +25,14 @@ public class CucumberRunner extends AbstractTestNGCucumberTests {
     TestContext testContext;
     private TestNGCucumberRunner testNGCucumberRunner;
 
-    @Before (order = 1)
+    @Before (order = 2)
     public void setUp() {
-//        testContext = new TestContext();
+        testContext = new TestContext();
         testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
-//        testContext.getLogger().log(LogLevel.INFO,"<=============================On Before Class======================================>");
-//        Context scenarioContext = new Context();
-//        testContext.registerContext(scenarioContext);
-//        Reporter.register(testContext.getReporter());
+        testContext.getLogger().log(LogLevel.INFO,"<=============================On Before Class======================================>");
+        Context scenarioContext = new Context();
+        testContext.registerContext(scenarioContext);
+        Reporter.register(testContext.getReporter());
         Reporter.setUp();
     }
 

@@ -103,7 +103,6 @@ public abstract class PageWrapper extends Browser{
         if (getElement(formatLocator(elementLocator, formatters)) != null) {
             webElement.clear();
             Reporter.log(LogLevel.INFO,elementName + " text element has been set cleared ");
-
         } else {
             testContext.getLogger().log(LogLevel.ERROR, String.format(errorMessage,"clear"));
         }
