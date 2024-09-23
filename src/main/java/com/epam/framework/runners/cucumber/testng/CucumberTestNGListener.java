@@ -32,12 +32,8 @@ public class CucumberTestNGListener implements ITestListener {
     }
     @Override
     public synchronized void onTestStart(ITestResult result) {
-//        CucumberRunner runner = new CucumberRunner();
-//        runner.setUp();
-        testContext = new TestContext();
-        Context scenarioContext = new Context();
-        TestContext.registerContext(scenarioContext);
-        Reporter.register(testContext.getReporter());
+        CucumberRunner runner = new CucumberRunner();
+        runner.setUp();
 
         String methodName = result.getMethod().getMethodName();
         Map<String, Object> additionalParams = new HashMap<>();
