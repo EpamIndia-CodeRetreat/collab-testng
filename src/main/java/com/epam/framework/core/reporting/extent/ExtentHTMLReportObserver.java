@@ -67,7 +67,7 @@ public class ExtentHTMLReportObserver implements HTMLReportObserver {
 
     @Override
     public void createTest(String testName, Map<String, Object> additionalParams) {
-        ExtentTest methodTest = extentReports.createTest(testName);
+        methodTest = extentReports.createTest(testName);
         extentTestThreadLocal.set(methodTest);
     }
 

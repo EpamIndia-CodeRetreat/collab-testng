@@ -25,7 +25,7 @@ public class CucumberRunner extends AbstractTestNGCucumberTests {
     TestContext testContext;
     private TestNGCucumberRunner testNGCucumberRunner;
 
-    @Before (order = 2)
+//    @Before (order = 1)
     public void setUp() {
         testContext = new TestContext();
         testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());

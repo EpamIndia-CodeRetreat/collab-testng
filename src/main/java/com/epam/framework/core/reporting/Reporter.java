@@ -42,7 +42,13 @@ public class Reporter {
     }
 
     public static void createTest(String testName, Map<String, Object> additionalParams) {
-        observerList.forEach(e -> e.createTest(testName, additionalParams));
+//        observerList.forEach(e -> e.createTest(testName, additionalParams));
+
+        for(int i=0; i < observerList.size(); i++){
+            HTMLReportObserver htmlReportObserver = observerList.get(i);
+            htmlReportObserver.createTest(testName, additionalParams);
+        }
+
     }
 
     public static void createNode(String testStep) {

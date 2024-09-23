@@ -27,6 +27,9 @@ public class CucumberTestNGListener implements ITestListener {
     }
     @Override
     public synchronized void onTestStart(ITestResult result) {
+        CucumberRunner runner = new CucumberRunner();
+        runner.setUp();
+
         String methodName = result.getMethod().getMethodName();
         Map<String, Object> additionalParams = new HashMap<>();
         additionalParams.put("ITestResult", result);
