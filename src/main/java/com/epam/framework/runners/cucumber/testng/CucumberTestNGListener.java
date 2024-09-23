@@ -1,6 +1,10 @@
 package com.epam.framework.runners.cucumber.testng;
 
+import com.epam.framework.core.Context;
+import com.epam.framework.core.TestContext;
+import com.epam.framework.core.logging.logger.LogLevel;
 import com.epam.framework.core.reporting.Reporter;
+import io.cucumber.testng.TestNGCucumberRunner;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -9,6 +13,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CucumberTestNGListener implements ITestListener {
+    TestContext testContext;
 
     @Override
     public synchronized void onStart(ITestContext context) {
@@ -27,8 +32,12 @@ public class CucumberTestNGListener implements ITestListener {
     }
     @Override
     public synchronized void onTestStart(ITestResult result) {
-        CucumberRunner runner = new CucumberRunner();
-        runner.setUp();
+//        CucumberRunner runner = new CucumberRunner();
+//        runner.setUp();
+        testContext = new TestContext();
+        Context scenarioContext = new Context();
+        TestContext.registerContext(scenarioContext);
+        Reporter.register(testContext.getReporter());
 
         String methodName = result.getMethod().getMethodName();
         Map<String, Object> additionalParams = new HashMap<>();
