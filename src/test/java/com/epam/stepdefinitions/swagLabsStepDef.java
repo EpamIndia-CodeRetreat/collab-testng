@@ -70,7 +70,7 @@ public class swagLabsStepDef {
 
         if(Integer.parseInt(notificationIconText) == noOfItemsClicked) {
             Reporter.log(LogLevel.INFO, "Notification icon is displaying the no of items in cart correctly");
-            Reporter.pass("Items added to shopping cart correctly");
+            Reporter.pass( notificationIconText + " Items added to shopping cart correctly");
         }
         swagLabsInventoryPage.clickShoppingCartIcon();
     }
@@ -96,13 +96,13 @@ public class swagLabsStepDef {
 
         float totalPriceOfItems = Float.parseFloat(totalItemPriceStr.split("\\$")[1]);
         Assert.assertEquals(totalPriceOfItems , totalItemPrice);
-        Reporter.pass("Item price total is calculated correctly");
+        Reporter.pass("Item price total is calculated correctly " + totalItemPriceStr);
 
         float totalTaxOnItems = Float.parseFloat(totalTaxStr.split("\\$")[1]);
         float totalBillOfItems  = totalPriceOfItems + totalTaxOnItems;
 
         Assert.assertEquals(Float.parseFloat(totalBillStr.split("\\$")[1]), totalBillOfItems);
-        Reporter.pass("Total Bill is calculated correctly");
+        Reporter.pass("Total Bill is calculated correctly " + totalBillStr);
 
         swagLabsCheckoutFinishPage.clickFinishButton();
 
