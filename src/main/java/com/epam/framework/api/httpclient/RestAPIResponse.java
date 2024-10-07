@@ -2,10 +2,10 @@ package com.epam.framework.api.httpclient;
 
 import com.epam.framework.core.TestContext;
 import com.epam.framework.core.logging.logger.LogLevel;
+import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 
 
@@ -36,11 +36,19 @@ public class RestAPIResponse {
         RestAPIRequest.createHttpUriRequest();
         RestAPIRequest.getRestAPIRequest().logRequest(RestAPIRequest.getHttpUriRequest());
         response = RestAPIRequest.getHttpClient().execute(RestAPIRequest.getHttpUriRequest());
-        RestAPIRequest.getRestAPIRequest().logResponse(response);
-        response.getEntity().writeTo(byteArrayOutputStream);
-        fileEntity = byteArrayOutputStream.toByteArray();
-        bodyEncoded = new String(fileEntity, StandardCharsets.UTF_8);
-        body = new String(bodyEncoded.getBytes(StandardCharsets.UTF_8));
+//        RestAPIRequest.getRestAPIRequest().logResponse(response);
+//        response.getEntity().writeTo(byteArrayOutputStream);
+//        fileEntity = byteArrayOutputStream.toByteArray();
+//        bodyEncoded = new String(fileEntity, StandardCharsets.UTF_8);
+//        body = new String(bodyEncoded.getBytes(StandardCharsets.UTF_8));
+        final HttpEntity entity = response.getEntity();
+        if (entity == null) {
+            System.out.println("######## Entity is null #######");
+            body = null;
+        } else {
+            body = inputStreamToString(entity.getContent());
+        }
+        statusCode = response.getStatusLine().getStatusCode();
         return response;
     }
     public static byte[] getFileEntity() {
@@ -62,5 +70,19 @@ public class RestAPIResponse {
     HttpResponse getRawResponse() {
         return rawResponse;
     }
-}
 
+    private static String inputStreamToString(InputStream is) {
+        String line = "";
+        StringBuilder total = new StringBuilder();
+        BufferedReader rd = new BufferedReader(new InputStreamReader(is));
+
+        try {
+             while ((line = rd.readLine()) != null) {
+                total.append(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+       return total.toString();
+    }
+}

@@ -37,6 +37,7 @@ public class ExtentHTMLReportObserver implements HTMLReportObserver {
     private static final String HTML_REPORT_NAME = prop.getProperty("html.report.name", "report.html");
     private static final String XML_CONFIG_FILENAME = prop.getProperty("html.report.xmlconfig.name", "extent-config.xml");
 
+
     @Override
     public synchronized void setUp() {
         String currentDateTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy_MM_dd HH_mm"));
