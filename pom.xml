@@ -14,7 +14,7 @@
 		<freemaker-version>2.3.29</freemaker-version>
 		<selenium-version>4.20.0</selenium-version>
 		<slf4j-version>2.0.13</slf4j-version>
-		<cucumber-version>7.18.0</cucumber-version>
+		<cucumber-version>7.15.0</cucumber-version>
 		<testng-version>7.1.0</testng-version>
 	</properties>
 
@@ -39,11 +39,17 @@
 			<groupId>com.epam.reportportal</groupId>
 			<artifactId>logger-java-logback</artifactId>
 			<version>5.2.2</version>
+			<scope>test</scope>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>com.epam.reportportal</groupId>
 			<artifactId>agent-java-cucumber6</artifactId>
 			<version>5.1.0-RC-3</version>
+		</dependency> -->
+		<dependency>
+			<groupId>com.epam.reportportal</groupId>
+			<artifactId>agent-java-cucumber6</artifactId>
+			<version>5.3.2</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>

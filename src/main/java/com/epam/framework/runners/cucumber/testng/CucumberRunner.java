@@ -22,8 +22,8 @@ import java.util.Map;
 @Listeners(CucumberTestNGListener.class)
 @CucumberOptions(
         features = {"src/test/resources/features/sampleAPITest.feature"},
-        glue = {"com.epam.stepdefinitions","com.epam.framework.runners.cucumber"}
-//        plugin =  {"pretty", "com.epam.reportportal.cucumber.StepReporter","com.epam.reportportal.cucumber.ScenarioReporter"}
+        glue = {"com.epam.stepdefinitions","com.epam.framework.runners.cucumber"},
+        plugin =  {"pretty", "com.epam.reportportal.cucumber.StepReporter"}
 )
 public class CucumberRunner extends AbstractTestNGCucumberTests {
     TestContext testContext;
